@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d2533"/><stop offset="1" stop-color="#0f1218"/>
+    </linearGradient>
+    <linearGradient id="tail" x1="0" y1="1" x2="0.4" y2="0">
+      <stop offset="0" stop-color="#3b6ff6"/><stop offset="1" stop-color="#4fe0c8"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="url(#bg)"/>
+  <!-- coda di sirena: corpo largo che sale curvando, vita stretta, pinna a due lobi (spostata a sinistra per centrarla) -->
+  <path transform="translate(-28 -6)" d="M96 246
+           C92 206 112 178 134 156
+           C148 142 154 128 152 116
+           C134 120 108 112 92 92
+           C118 82 146 88 160 102
+           C164 82 186 62 220 56
+           C218 88 198 110 172 118
+           C178 136 176 154 166 172
+           C152 198 156 222 172 246 Z" fill="url(#tail)"/>
+  <!-- squame -->
+  <g transform="translate(-28 -6)" fill="none" stroke="#0f1218" stroke-opacity=".35" stroke-width="5" stroke-linecap="round">
+    <path d="M112 222 q12 -11 24 0 q12 -11 24 0"/>
+    <path d="M122 196 q11 -10 22 0 q10 -9 20 0"/>
+    <path d="M136 170 q10 -9 20 0"/>
+  </g>
+</svg>

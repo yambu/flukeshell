@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
+<title>Flukeshell</title>
+<link rel="stylesheet" href="node_modules/@xterm/xterm/css/xterm.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside>
+  <header><span data-i18n="tabs"></span><span><button id="settings-btn" data-i18n-title="settingsTip">⚙</button><button id="mute">🔔</button><button id="new-tab" data-i18n-title="newTabTip">+</button></span></header>
+  <ul id="tabs"></ul>
+  <button id="history-btn" data-i18n-title="closedTip">🕘 <span data-i18n="closedSessions"></span> <span id="history-count"></span></button>
+  <div id="history" hidden>
+    <header><span data-i18n="closedSessions"></span> <button id="history-close" data-i18n-title="close">✕</button></header>
+    <ul id="history-list"></ul>
+  </div>
+</aside>
+<main id="terms">
+  <div id="toast"></div>
+  <div id="settings" hidden>
+    <header><span data-i18n="settings"></span> <button id="settings-close" data-i18n-title="closeEsc">✕</button></header>
+    <section>
+      <h3 data-i18n="account"></h3>
+      <div id="acc" class="dim"></div>
+      <div class="row"><button id="login" data-i18n="login"></button><button id="logout" data-i18n="logout"></button></div>
+    </section>
+    <section>
+      <h3><span data-i18n="usage"></span> <button id="usage-refresh" class="link" data-i18n="refresh"></button></h3>
+      <div id="usage" class="dim"></div>
+    </section>
+    <section>
+      <h3 data-i18n="options"></h3>
+      <label class="opt"><input type="checkbox" id="opt-sound"> <span data-i18n="sounds"></span></label>
+      <div class="opt"><span data-i18n="textSize"></span> <button id="font-minus">−</button><span id="font-size"></span><button id="font-plus">+</button></div>
+      <div class="opt"><span data-i18n="language"></span> <select id="opt-lang"><option value="en">English</option><option value="it">Italiano</option></select></div>
+    </section>
+    <section>
+      <h3 data-i18n="shortcuts"></h3>
+      <button id="make-links" data-i18n="makeLinks"></button>
+      <div id="links-msg" class="dim"></div>
+    </section>
+  </div>
+  <div id="search" hidden><input data-i18n-ph="searchPh"></div>
+</main>
+<script src="node_modules/@xterm/xterm/lib/xterm.js"></script>
+<script src="node_modules/@xterm/addon-fit/lib/addon-fit.js"></script>
+<script src="node_modules/@xterm/addon-search/lib/addon-search.js"></script>
+<script src="node_modules/@xterm/addon-web-links/lib/addon-web-links.js"></script>
+<script src="node_modules/@xterm/addon-webgl/lib/addon-webgl.js"></script>
+<script src="node_modules/@xterm/addon-unicode11/lib/addon-unicode11.js"></script>
+<script src="renderer.js"></script>
+</body>
+</html>
